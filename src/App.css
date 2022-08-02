@@ -1,38 +1,437 @@
-.App {
-  text-align: center;
+* {
+  font-family: "DM Sans";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  background-color: hsl(27, 66%, 92%);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.totalBal {
+  background-color: hsl(10, 79%, 65%);
+  width: 40%;
+  border-radius: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.chartData {
+  background-color: white;
+  width: 40%;
+  border-radius: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.font {
+  font-weight: lighter;
   color: white;
+  padding-top: 12px;
+  margin-top: 0;
+  margin-bottom: 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.footerFont {
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 0.21);
+  padding-top: 12px;
+  margin-top: 0;
+  margin-bottom: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footerFont2 {
+  font-weight: bolder;
+  color: black;
+  padding-top: 12px;
+  margin-top: 0;
+  margin-bottom: 0px;
+  text-align: right;
+}
+.footerBalance {
+  font-weight: bolder;
+  font-size: 25px;
+  color: black;
+  padding-top: 0spx;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+.footerBalance2 {
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 0.21);
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 0px;
+  text-align: right;
+}
+
+.balance {
+  padding-top: 1px;
+  padding-bottom: 12px;
+  color: white;
+  margin-top: 2px;
+  margin-bottom: 0.2px;
+  font-size: medium;
+}
+.spending-title {
+  padding-top: 12px;
+  margin-top: 10px;
+  padding-top: 20px;
+}
+
+.barColor {
+  background-color: hsl(10, 79%, 65%);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  width: 30px;
+}
+
+.barContainer {
+  display: flex;
+  height: 100px;
+  padding-bottom: 2px;
+}
+
+.dayContainer {
+  display: flex;
+  height: 20px;
+  padding-bottom: 5px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mon {
+  height: 25px;
+  align-self: flex-end;
+}
+#tue {
+  height: 50px;
+  align-self: flex-end;
+}
+#wed {
+  height: 85px;
+  align-self: flex-end;
+}
+#thu {
+  height: 45px;
+  align-self: flex-end;
+}
+#fri {
+  height: 35px;
+  align-self: flex-end;
+}
+#sat {
+  height: 60px;
+  align-self: flex-end;
+}
+#sun {
+  height: 35px;
+  align-self: flex-end;
+}
+
+.dayOne {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 230px;
+  bottom: 97px;
+}
+
+.dayTwo {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 276px;
+  bottom: 97px;
+}
+
+.dayThree {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 316px;
+  bottom: 97px;
+}
+
+.dayFour {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 361px;
+  bottom: 97px;
+}
+
+.dayFive {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 406px;
+  bottom: 97px;
+}
+
+.daySix {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 446px;
+  bottom: 97px;
+}
+
+.daySeven {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 487px;
+  bottom: 97px;
+}
+
+.hrStyle {
+  margin-top: 0;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+.footerSec {
+  display: flex;
+  width: 100%;
+}
+
+.width {
+  width: 50%;
+}
+
+.width2 {
+  width: 50%;
+  align-self: flex-end;
+  padding-bottom: 5px;
+}
+
+.mouseIn {
+  background-color: hsl(186, 34%, 60%);
+}
+
+.price-mon {
+  background-color: hsl(25, 47%, 15%);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 150px;
+  left: 222px;
+  position: absolute;
+}
+
+.price-tue {
+  background-color: hsl(25, 47%, 15%);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: 265px;
+  bottom: 175px;
+}
+
+.price-wed {
+  background-color: hsl(25, 47%, 15%);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: 308px;
+  bottom: 210px;
+}
+
+.price-thu {
+  background-color: hsl(25, 47%, 15%);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: 348px;
+  bottom: 170px;
+}
+.price-fri {
+  background-color: hsl(25, 47%, 15%);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: 390px;
+  bottom: 160px;
+}
+.price-sat {
+  background-color: hsl(25, 47%, 15%);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: 433px;
+  bottom: 185px;
+}
+.price-sun {
+  background-color: hsl(25, 47%, 15%);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: 475px;
+  bottom: 160px;
+}
+
+.show {
+  visibility: hidden;
+}
+
+.img-style {
+  padding-left: 97px;
+  height: 35px;
+  padding-bottom: 5px;
+}
+
+@media screen and (max-width: 391px) {
+  .container {
+    width: 170% !important;
+    margin: 9% !important;
+    padding: 0px !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .chartData {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+  .totalBal {
+    margin-left: 0px !important;
+  }
+  .img-style {
+    padding-left: 90px !important;
+  }
+  .dayOne {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 72px;
+    bottom: 560px;
+  }
+
+  .dayTwo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 113px;
+    bottom: 560px;
+  }
+
+  .dayThree {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 148px;
+    bottom: 560px;
+  }
+
+  .dayFour {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 188px;
+    bottom: 560px;
+  }
+
+  .dayFive {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 230px;
+    bottom: 560px;
+  }
+
+  .daySix {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 265px;
+    bottom: 560px;
+  }
+
+  .daySeven {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 303px;
+    bottom: 560px;
   }
 }
